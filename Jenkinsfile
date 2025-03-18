@@ -3,12 +3,14 @@ pipeline {
 
     stages {
         stage('Build') {
-            steps {
-                script {
-                    sh 'g++ -o PES1UG22CS124-1 main.cpp'
-                }
-            }
+    steps {
+        script {
+            sh 'pwd'  # Print current workspace path
+            sh 'ls -la'  # List all files
+            sh 'g++ -o PES1UG22CS124-1 main.cpp'  // Compile
         }
+    }
+}
 
         stage('Test') {
             steps {
