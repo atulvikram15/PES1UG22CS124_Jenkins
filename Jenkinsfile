@@ -1,37 +1,20 @@
 pipeline {
     agent any
-
     stages {
         stage('Build') {
-    steps {
-        script {
-            sh 'pwd'  
-            sh 'ls -la'  
-            sh 'g++ -o PES1UG22CS124-1 main/main.cpp'  
+            steps {
+                sh 'g++ -o PES1UG22CS124-1 main/main.cpp' 
+            }
         }
-    }
-}
-
-
         stage('Test') {
             steps {
-                script {
-                    sh './PES1UG22CS124-1'
-                }
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying application...'
-                
+                sh 'exit 1'  
             }
         }
     }
-
     post {
         failure {
-            echo 'Pipeline failed'
+            echo "Pipeline failed"
         }
     }
 }
