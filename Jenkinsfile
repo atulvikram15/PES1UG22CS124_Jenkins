@@ -7,7 +7,7 @@ pipeline {
         script {
             sh 'pwd'  
             sh 'ls -la'  
-            sh 'g++ -o PES1UG22CS124-1 main.cpp'  
+            sh 'g++ -o PES1UG22CS124-1 main/main.cpp'  
         }
     }
 }
