@@ -5,12 +5,13 @@ pipeline {
         stage('Build') {
     steps {
         script {
-            sh 'pwd'  # Print current workspace path
-            sh 'ls -la'  # List all files
-            sh 'g++ -o PES1UG22CS124-1 main.cpp'  // Compile
+            sh 'pwd'  
+            sh 'ls -la'  
+            sh 'g++ -o PES1UG22CS124-1 main.cpp'  
         }
     }
 }
+
 
         stage('Test') {
             steps {
